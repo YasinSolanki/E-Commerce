@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-indigo-600 tracking-tighter">
-          Eminence Intellitech
+          DemoSite from Eminence Intellitech
         </Link>
 
         {/* Desktop Links */}
