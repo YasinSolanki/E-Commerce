@@ -150,16 +150,16 @@ const Product = () => {
       {/* Similar Products */}
       <section className="mt-24 border-t border-gray-100 pt-16 mb-20">
         <h2 className="text-3xl font-black text-gray-900 mb-10 tracking-tight uppercase">Customers also viewed</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {getProducts().filter(p => String(p.id) !== String(product.id)).slice(0, 6).map(p => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {getProducts().filter(p => String(p.id) !== String(product.id)).slice(0, 4).map(p => (
             <Link to={`/product/${p.id}`} key={p.id} className="group">
-              <div className="bg-white rounded-3xl overflow-hidden border border-gray-50 p-3 hover:shadow-2xl transition-all duration-500 h-full ring-1 ring-gray-900/5 hover:ring-indigo-600/20">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gray-50 mb-4">
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 p-4 hover:shadow-2xl transition-all duration-500 h-full ring-1 ring-gray-900/5 hover:ring-indigo-600/20">
+                <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-gray-50 mb-6">
+                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
-                <div className="px-1">
-                  <div className="text-sm font-black text-gray-900 line-clamp-1 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tighter">{p.name}</div>
-                  <div className="text-sm font-bold text-gray-400">{formatCurrency(p.price)}</div>
+                <div className="px-2 pb-2">
+                  <div className="text-lg font-black text-gray-900 line-clamp-1 mb-1 group-hover:text-indigo-600 transition-colors uppercase tracking-tight">{p.name}</div>
+                  <div className="text-base font-bold text-gray-400">{formatCurrency(p.price)}</div>
                 </div>
               </div>
             </Link>
